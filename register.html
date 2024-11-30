@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="font-mono">
+    <div class="container m-auto">
+      <div
+        class="mt-10 p-4 rounded-lg w-[500px] m-auto border-2 border-r-red-500 border-b-red-500"
+      >
+        <h1 class="text-4xl text-center font-semibold text-[#FF003D]">
+          Register
+        </h1>
+        <form class="mt-10 js-register-form" autocomplete="off">
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-lastname"
+            type="text"
+            name="user_name"
+            aria-label="User name"
+            placeholder="Username"
+          />
+
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-email"
+            type="email"
+            name="user_email"
+            aria-label="email"
+            placeholder="Your email"
+           
+          />
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-password"
+            type="password"
+            name="user_password"
+            aria-label="password"
+            placeholder="Password"
+           
+          />
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-age"
+            type="text"
+            name="phone"
+            aria-label="phone"
+            placeholder="Phone number"
+            value="902023010"
+           
+          />
+          <button
+            class="p-2 w-[50%] m-auto mt-5 block bg-red-500 text-white rounded-lg border-2"
+            type="submit"
+          >
+            Sing Up
+          </button>
+        </form>
+        <p class="w-[360px] mt-6 text-sm m-auto text-center">
+          By registering you agree to
+          <span class="text-red-500">Terms & Conditions</span> and
+          <span class="text-red-500">Privacy Policy</span> of the Vermo
+        </p>
+
+        <a
+          class="text-end block mt-5 text-lg text-blue-500 font-semibold"
+          href="./index.html"
+          >Sign In</a
+        >
+      </div>
+    </div>
+
+    <script src="../js/register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Shop</title>
+  <style>
+    mark{
+      padding: 0;
+      background: #53ee5d;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="../css/output.css" /> -->
+</head>
+
+<body class="bg-gray-100">
+  
+<div class="fixed inset-0 bg-black bg-opacity-50 flex hidden items-center justify-center js-order-modal">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md max-h-[80vh] shadow-lg relative">
+      
+      
+      <h2 class="text-lg font-bold mb-4 text-center">Orders</h2>
+      <h2 class="text-lg font-bold mb-4 total">Orders</h2>
+      <ul class="space-y-3 overflow-y-auto max-h-[70vh] px-4 js-order-list">
+    
+      </ul>
+    </div>
+  </div>
+<div class="fixed inset-0 bg-black bg-opacity-50 flex hidden items-center justify-center js-modal">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md max-h-[80vh] shadow-lg relative">
+      
+      
+      <h2 class="text-lg font-bold mb-4 text-center">Bookmarks</h2>
+      <ul class="space-y-3 overflow-y-auto max-h-[70vh] px-4 js-bookmark-list">
+    
+      </ul>
+    </div>
+  </div>
+  
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="./admin.html" class="text-2xl font-bold text-gray-800">My Shop</a>
+      <nav class="flex space-x-6">
+        <a href="./client.html" class="text-gray-600 hover:text-gray-800">Home</a>
+        <button type="button" class="text-gray-600 hover:text-gray-800 js-bookmark-btn">Bookmark<span class="js-bookmark-count  size-6 text-white mt-[-40px] bg-slate-700  border rounded" >0</span></button>
+       
+      </nav>
+      <a  class="text-gray-600 hover:text-gray-800 cursor-pointer js-order-btn flex">
+        <span class="js-order-count  size-6 text-white mt-[-40px] bg-slate-700  border rounded" >0</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 rotate-180 ">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h18l-1 13H4L3 3zM16 16a4 4 0 11-8 0h8z" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <template class="js-temp">
+    <li class="bg-white shadow rounded overflow-hidden list-none">
+        <img src="https://via.placeholder.com/300" alt="Product Image" class="w-full h-48 object-cover js-img" />
+        <div class="p-4">
+            <div class="flex gap-48">
+
+                <h3 class="text-lg font-bold text-gray-800 mb-2 js-title" >Product Name</h3> 
+                <img src="./assets/img/image.png" class="w-7 h-7 cursor-pointer js-bookmark" alt="">
+            </div>
+          <p class="text-gray-600 mb-4 js-price">$50.00</p>
+          <p class="text-gray-600 mb-4 js-desc">$50.00</p>
+          <button
+            class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300 js-add">Add to
+            Cart</button>
+        </div>
+      </li>
+  </template>
+  <template class="js-templete">
+    <li class="bg-white shadow rounded overflow-hidden list-none">
+        <img src="https://via.placeholder.com/300" alt="Product Image" class="w-full h-48 object-cover js-img" />
+        <div class="p-4">
+            <div class="flex gap-40">
+
+              <h3 class="text-lg font-bold text-gray-800 mb-2 js-title" >Product Name</h3> 
+              <img src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png" class="w-7 h-7 cursor-pointer js-bookmark" alt="">
+            </div>
+          <p class="text-gray-600 mb-4 js-price">$50.00</p>
+          
+        </div>
+      </li>
+  </template>
+
+  <section id="products" class="py-12 min-h-[81.5vh]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Products</h2>
+      <form class="js-form mb-5">
+        <input type="text" class="w-[70%] px-4 py-2 text-sm border rounded-lg shadow-sm focus:ring focus:ring-red-300 focus:border-red-500 focus:outline-none border-gray-300 js-filter-input">
+        <select class="js-sort-select">
+          <option value="" hidden>All</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+          <option value="lot-few">expense-cheap</option>
+          <option value="few-lot">cheap-expense</option>
+      </select>
+        <button class="w-[18%] ml-5 bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300">Search</button>
+      </form>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 js-products-list">
+    
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center ">
+      <p>&copy; 2024 Online Shop. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="./js/client.js"></script>
+</body>
+
+</html>

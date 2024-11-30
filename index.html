@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <div class="container m-auto">
+      <div
+        class="mt-28 p-4 rounded-lg w-[500px] m-auto border-2 border-r-red-500 border-b-red-500"
+      >
+        <h1 class="text-4xl text-center font-semibold text-[#FF003D]">
+          Log in
+        </h1>
+        <form class="mt-10 js-login-form" autocomplete="off">
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-login-email"
+            type="email"
+            name="email"
+            aria-label="age"
+            placeholder="Your email"
+           
+          />
+
+          <input
+            class="mb-8 pb-2 pl-1 border-b-2 border-[#99999954] w-full focus:outline-none text-lg js-login-password"
+            type="password"
+            name="password"
+            aria-label="password"
+            placeholder="Password"
+              />
+          <button
+            class="p-2 w-[50%] m-auto mt-5 block bg-red-500 text-white rounded-lg border-2 js-login-btn"
+            type="submit"
+          >
+            Sing In
+          </button>
+        </form>
+        <p class="w-[360px] mt-6 text-sm m-auto text-center">
+          By registering you agree to
+          <span class="text-red-500">Terms & Conditions</span> and
+          <span class="text-red-500">Privacy Policy</span> of the Vermo
+        </p>
+
+        <a
+          class="text-end block mt-5 text-lg text-blue-500 font-semibold"
+          href="./register.html"
+          >Sign Up</a
+        >
+      </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
